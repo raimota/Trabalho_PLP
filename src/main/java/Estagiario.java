@@ -1,4 +1,6 @@
-public class Estagiario extends Funcionario{
+
+public class Estagiario extends Funcionario {
+
     private double vale_coxinha;
 
     public Estagiario(int ID, String nome, double salario, double vale_coxinha) {
@@ -14,9 +16,9 @@ public class Estagiario extends Funcionario{
     public void setVale_coxinha(double vale_coxinha) {
         this.vale_coxinha = vale_coxinha;
     }
-    
+
     @Override
-    public double getSalario(){
+    public double getSalario() {
         return super.getSalario() + this.getVale_coxinha();
     }
 }

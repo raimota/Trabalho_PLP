@@ -1,4 +1,6 @@
+
 public abstract class Funcionario {
+
     private int ID;
     private String nome;
     private double salario;
@@ -11,7 +13,7 @@ public abstract class Funcionario {
         // Desconto fixo de um sistema de previdência da empresa
         this.previdencia = 0.05;
     }
-    
+
     public int getID() {
         return ID;
     }
@@ -30,7 +32,7 @@ public abstract class Funcionario {
 
     public double getSalario() {
         // Calcula o salário líquido
-        return(salario*(1-previdencia));
+        return (salario * (1 - previdencia));
     }
 
     public void setSalario(double salario) {
