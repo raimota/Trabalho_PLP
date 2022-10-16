@@ -1,5 +1,5 @@
 
 public interface alteraAdicional {
-    //Métodos
+    //Método
     public void alteraAdicional(double novo_percentual);
 }
