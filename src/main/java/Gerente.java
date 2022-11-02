@@ -1,20 +1,20 @@
 
 public class Gerente extends Funcionario implements alteraAdicional {
 
-    private double adicional;
+    private double adicional = 0.15;
 
-    public Gerente(int ID, String nome, double salario, double adicional) {
-        super(ID, nome, salario);
-        this.adicional = adicional;
+    public Gerente(String nome, double salario, double adicional) {
+        super(nome, salario);
+        this.adicional = (adicional/100);
         //O desconto da previdência é maior para gerentes
         super.setPrevidencia(0.07);
     }
 
-    public double getAdicional() {
+    protected double getAdicional() {
         return adicional;
     }
 
-    public void setAdicional(double adicional) {
+    protected void setAdicional(double adicional) {
         this.adicional = adicional;
     }
 
@@ -24,7 +24,13 @@ public class Gerente extends Funcionario implements alteraAdicional {
     }
 
     @Override
-    public double getSalario() {
-        return super.getSalario() + this.adicional;
+    protected double getSalario() {
+        return super.getSalario() + (super.getSalario() * this.adicional);
+    }
+
+    @Override
+    public String toString() {
+        return "Gerente{" + "ID = " + super.getID() + "; Nome = " + super.getNome() + "; Salário Livre= " + super.getSalario() + "; Previdência = " + super.getPrevidencia()
+                + "; Adicional = " + getAdicional() + '}';
     }
 }

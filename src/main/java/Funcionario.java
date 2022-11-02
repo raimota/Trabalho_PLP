@@ -1,49 +1,59 @@
 
-public abstract class Funcionario {
+public abstract class Funcionario implements alteraAdicional{
 
+    private static int count = -1; 
     private int ID;
     private String nome;
     private double salario;
     private double previdencia;
-
-    public Funcionario(int ID, String nome, double salario) {
-        this.ID = ID;
+    
+    protected Funcionario(String nome, double salario) {
+        this.ID = ++count; ;
         this.nome = nome;
         this.salario = salario;
         // Desconto fixo de um sistema de previdência da empresa
         this.previdencia = 0.05;
     }
 
-    public int getID() {
+    protected int getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    @Override
+    public String toString() {
+        return "Funcionario{" + "ID = " + ID + "; Nome = " + nome + "; Salário Bruto = " + salario + "; Previdência = " + previdencia + '}';
+    }
+
+    private void setID(int ID) {
         this.ID = ID;
     }
 
-    public String getNome() {
+    protected String getNome() {
         return nome;
     }
 
-    public void setNome(String nome) {
+    private void setNome(String nome) {
         this.nome = nome;
     }
 
-    public double getSalario() {
+    protected double getSalario() {
         // Calcula o salário líquido
         return (salario * (1 - previdencia));
     }
 
-    public void setSalario(double salario) {
+    private void setSalario(double salario) {
         this.salario = salario;
     }
 
-    public double getPrevidencia() {
+    protected double getPrevidencia() {
         return previdencia;
     }
 
-    public void setPrevidencia(double previdencia) {
+    protected void setPrevidencia(double previdencia) {
         this.previdencia = previdencia;
+    }
+
+    @Override
+    public void alteraAdicional(double novo_percentual) {
     }
 }
