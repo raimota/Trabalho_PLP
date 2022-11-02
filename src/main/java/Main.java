@@ -14,7 +14,7 @@ public class Main {
         double adicional_2;
         double adicional_3;
         double previdencia;
-        empresa.funcionario.add(new Estagiario("Rai", 3000, 900));
+        empresa.funcionario.add(new Estagiario("Fulano", 1200, 55));
 
         while (opcao != 5) {
             System.out.printf("Menu: \n"
