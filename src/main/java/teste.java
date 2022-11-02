@@ -6,7 +6,6 @@ public class teste {
     public static void main(String[] args) {
         Empresa empresa = new Empresa();
         Scanner leia = new Scanner(System.in);
-        empresa.funcionario.add(new Estagiario("Rai", 3000, 900));
         empresa.funcionario.add(new Gerente("Scott", 15000, 0.15));
         empresa.funcionario.add(new Presidente("Zézin", 40000));
 
