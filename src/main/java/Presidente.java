@@ -21,10 +21,12 @@ public class Presidente extends Funcionario implements alteraAdicional {
                 + this.adicional_adicional)));
     }
 
+    //Pegando o toString da classe mãe e adicinando os adicionais
     @Override
     public String toString() {
-        return "Presidente{" + "ID = " + super.getID() + "; Nome = " + super.getNome() + "; Salário Livre = " + super.getSalario() + "; Previdência = " + super.getPrevidencia()
-                + "; Adicional Whisky = " + adicional_whisky + "; Adicional Helicóptero = " + adicional_helicoptero + "; Adicional = " + adicional_adicional + '}';
+        return super.toString() + "; Adicional Whisky = " + adicional_whisky 
+                + "; Adicional Helicóptero = " + adicional_helicoptero 
+                + "; Adicional = " + adicional_adicional + '}';
     }
 
     @Override

@@ -1,14 +1,14 @@
 
-public abstract class Funcionario implements alteraAdicional{
+public abstract class Funcionario implements alteraAdicional {
 
-    private static int count = -1; 
+    private static int count = -1;
     private int ID;
     private String nome;
     private double salario;
     private double previdencia;
-    
+
     protected Funcionario(String nome, double salario) {
-        this.ID = ++count; ;
+        this.ID = ++count;;
         this.nome = nome;
         this.salario = salario;
         // Desconto fixo de um sistema de previdência da empresa
@@ -21,7 +21,7 @@ public abstract class Funcionario implements alteraAdicional{
 
     @Override
     public String toString() {
-        return "Funcionario{" + "ID = " + ID + "; Nome = " + nome + "; Salário Bruto = " + salario + "; Previdência = " + previdencia + '}';
+        return "Funcionario{" + "ID = " + ID + "; Nome = " + nome + "; Salário Bruto = " + salario + "; Previdência = " + previdencia;
     }
 
     private void setID(int ID) {
